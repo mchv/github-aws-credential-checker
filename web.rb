@@ -37,4 +37,6 @@ post '/payload' do
         'Authorization' => "token #{ENV['TOKEN']}" }
     )
   end
+  # return an empty reponse
+  ""
 end
