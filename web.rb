@@ -29,7 +29,7 @@ post '/payload' do
       "target_url"  => "https://github.com/mchv/github-aws-credential-checker",
       "context"     => "validate/no-credentials-in-commits"
     }
-    HTTParty.post(status_url,
+    response = HTTParty.post(status_url,
       :body => status.to_json,
       :headers => {
         'Content-Type'  => 'application/json',
@@ -38,5 +38,5 @@ post '/payload' do
     )
   end
   # return an empty reponse
-  ""
+  " code: #{reponse.code} msg: #{reponse.message}"
 end
