@@ -38,5 +38,5 @@ post '/payload' do
     )
   end
   # return an empty reponse
-  " code: #{reponse.code} msg: #{reponse.message}"
+  " code: #{response.code} msg: #{response.message}"
 end
